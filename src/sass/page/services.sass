@@ -1,0 +1,34 @@
+.services
+  h1
+    padding: 50px 0 65px
+    +r(767)
+      padding: 35px 0
+  &__block
+    margin-bottom: 100px
+    +r(767)
+      margin-bottom: 35px
+    &__img
+      +center
+      padding-top: 20px
+      +r(767)
+        padding-bottom: 15px
+    &__text
+      max-width: 320px
+      h2
+        font-size: 24px
+        font-weight: bold
+        color: $black
+        margin-bottom: 15px
+        &.hidden-xs
+          height: 50px
+          margin-bottom: 0
+        +r(1024)
+          height: auto
+          margin-bottom: 15px
+      li
+        padding-bottom: 10px
+      a
+        font-size: 18px
+        color: rgba(0, 0, 0, 0.52)
+        &:hover
+          color: $bright-sky-blue-two

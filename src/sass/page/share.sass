@@ -1,0 +1,102 @@
+.share
+  padding-bottom: 50px
+  overflow: hidden
+  +r(767)
+    padding-bottom: 35px
+  h1
+    padding: 50px 0
+    +r(767)
+      padding: 35px 0
+  &__block
+    border-radius: 30px
+    height: 280px
+    width: calc(100% - 15px)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 50%
+    overflow: hidden
+    margin-right: 15px
+    transition: all 1s
+    margin-bottom: 30px
+    +r(767)
+      width: 100%
+    a
+      width: 100%
+      height: 100%
+      +center
+      padding: 0 30px
+      font-size: 24px
+      font-weight: bold
+      text-align: center
+      color: $bright-sky-blue-two
+      background: #000
+      background: rgba($duck-egg-blue, 0.8)
+      position: relative
+      transition: all 1s
+      +r(767)
+        padding: 0
+      span
+        font-size: 24px
+        font-weight: bold
+        text-align: center
+        color: $white
+        position: relative
+        z-index: 3
+      +r(767)
+         background: transparent
+         color: $white
+      &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        opacity: 0
+        background-image: linear-gradient(to left, rgba(0, 177, 255, 0.6), $pink)
+        transition: all 1s
+        z-index: -1
+        +r(767)
+          opacity: 0.85
+          z-index: 0
+          background: rgba($duck-egg-blue, 0.8)
+    &:hover
+      transform: scale(1.06)
+      +r(767)
+        transform: none
+      a
+        background: transparent
+        color: $white
+        transform: scale(1.08)
+        +r(767)
+          transform: none
+        &:before
+          opacity: 0.85
+  .swiper-container
+    padding: 0 0 60px
+    overflow: visible
+    display: none
+    .swiper-slide
+      transition: all 1s
+      position: relative
+      z-index: -1
+    +r(767)
+      display: block
+    .swiper-slide-active
+      position: relative
+      z-index: 1
+      transform: translate(0, -30px)
+      .share__block a:before
+        background-image: linear-gradient(to left, rgba(0, 177, 255, 0.6), $pink)
+    .swiper-slide-prev
+      position: relative
+      transform: translate(60px)
+      z-index: -1
+      .share__block a:before
+        background: rgba($duck-egg-blue, 0.8)
+    .swiper-slide-next
+      position: relative
+      transform: translate(-60px)
+      z-index: -1
+      .share__block a:before
+        background: rgba($duck-egg-blue, 0.8)

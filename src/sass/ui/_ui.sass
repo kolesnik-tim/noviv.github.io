@@ -1,0 +1,246 @@
+html
+body
+  font-family: 'DINRoundPro', serif
+  font-size: 18px
+  box-sizing: border-box
+  position: relative
+body.active
+  overflow: hidden
+
+.container
+  width: 100% !important
+  max-width: 1110px
+  box-sizing: border-box
+  +r(1140)
+    padding: 0 15px
+a
+  text-decoration: none
+  transition: all 0.3s
+.flex
+  display: flex
+.heading
+  margin-bottom: 50px
+  +r(767)
+    margin-bottom: 30px
+  h2
+    font-size: 40px
+    font-weight: bold
+    letter-spacing: 0.3px
+    text-align: center
+    color: $bright-sky-blue-two
+    +r(767)
+      font-size: 24px
+
+
+.btn
+  height: 60px
+  width: 255px
+  +center
+  display: inline-flex
+  font-size: 18px
+  font-weight: bold
+  letter-spacing: 0.3px
+  line-height: 1
+  color: $white
+  border-radius: 100px
+  text-transform: uppercase
+  font-family: 'DINRoundPro'
+  +tr
+  &-primary
+    background-color: $seafoam-blue
+    &:hover
+      box-shadow: 0px 10px 50px rgba($seafoam-blue, 0.7)
+  &-secondary
+    padding: 20px 0
+    border: 2px solid $bright-sky-blue-two
+    color: $bright-sky-blue-two
+    &:hover
+      box-shadow: 0px 10px 50px rgba($bright-sky-blue-two, 0.7)
+  &-blue
+    padding: 20px 0
+    border: 2px solid $bright-sky-blue-two
+    color: $white
+    background: $bright-sky-blue-two
+    &:hover
+      box-shadow: 0px 10px 50px rgba($bright-sky-blue-two, 0.7)
+  &-white
+    background-color: transparent
+    border: 2px solid $white
+    &:hover
+      box-shadow: 0px 10px 50px rgba($white, 0.7)
+  &-pink
+    border: 2px solid $pink
+    color: $white
+    background: $pink
+    &:hover
+      box-shadow: 0px 10px 50px rgba($pink, 0.7)
+
+
+
++r(767)
+	.hidden-xs
+		display: none !important
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+	.hidden-sm
+		display: none !important
++rmin(1024)
+	.hidden-md
+		display: none !important
+
+
+
+h1
+  font-size: 40px
+  font-weight: bold
+  text-align: center
+  color: $bright-sky-blue-two
+  +r(767)
+    font-size: 24px
+
+
+.breadcrumbs
+  background: #f8f8f8
+  height: 80px
+  .container
+    height: 100%
+  ul
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    height: 100%
+  li
+    a
+      font-size: 18px
+      color: $bright-sky-blue-two
+      padding-right: 15px
+      i
+        font-size: 16px
+        position: relative
+        right: -7px
+    &:last-child
+      i
+        display: none
+    &:first-child
+      text-transform: uppercase
+      a
+        font-weight: bold
+        line-height: 1
+      i
+        font-weight: 900
+
+.team__block
+  background: #e8fff4
+  border-radius: 30px
+  padding: 45px 40px
+  +tr
+  margin-right: 15px
+  width: calc(100% - 15px)
+  margin-bottom: 30px
+  +center-column
+  position: relative
+  &:hover
+    background: $seafoam-blue
+    h3
+      color: $white
+    p
+      color: rgba(255, 255, 255, 0.52)
+    a.btn
+      border: solid 2px $white
+  a:first-child
+    display: flex
+    align-items: center
+    flex-direction: column
+    &__link
+      position: absolute
+      width: 100%
+  &__img
+    width: 200px
+    height: 200px
+    border-radius: 100%
+    overflow: hidden
+  img
+    width: 100%
+  h3
+    font-size: 24px
+    text-align: center
+    color: $black
+    padding-top: 50px
+    +tr
+  p
+    font-size: 18px
+    text-align: center
+    color: rgba(0, 0, 0, 0.41)
+    padding-top: 10px
+    padding-bottom: 60px
+    +tr
+  a.btn
+    border: solid 2px $seafoam-blue
+
+
+.reviews__form .form__select .selectize-input .item
+  text-overflow: ellipsis
+  overflow: hidden
+  width: 250px
+  white-space: nowrap
+  &__link
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 9
+  +r(1024)
+    width: 100%
+    margin-right: 0
+  &:hover
+    background: $seafoam-blue
+    h3, p, .btn
+      color: $white
+    .btn
+      border: 2px solid $white
+  &__img
+    overflow: hidden
+    width: 200px
+    height: 200px
+    border-radius: 100%
+  h3
+    font-family: 'DINRoundPro-Medi'
+    font-size: 24px
+    text-align: center
+    color: $black
+    margin-top: 50px
+    +tr
+  p
+    font-size: 18px
+    text-align: center
+    color: rgba(0, 0, 0, 0.41)
+    margin-top: 15px
+    margin-bottom: 60px
+    +tr
+  a.btn
+    width: 100%
+    padding: 0
+    border: 2px solid $seafoam-blue
+    position: relative
+    z-index: 10
+
+
+
+.pages
+  padding-top: 35px
+  ul
+    +center-column
+    margin: 50px 0
+    li
+      margin-bottom: 10px
+      a
+        font-family: 'DINRoundPro-Medi'
+        font-size: 18px
+        text-align: center
+        color: $bright-sky-blue-two
+        +tr
+        &:hover
+          color: $black
+
+.aside
+  position: sticky !important
+  position: -webkit-sticky !important
+  top: 0

@@ -1,0 +1,49 @@
+.contacts
+  h1
+    padding: 50px 0
+    color: $bright-sky-blue-two
+    +r(767)
+      padding: 35px 0
+  &__img
+    overflow: hidden
+    height: 250px
+    width: 100%
+    +r(767)
+      margin-bottom: 15px
+      height: 175px
+    img
+      width: 100%
+      height: 100%
+      +object-fit(cover)
+  &__content
+    padding-left: 15px
+    p, a
+      font-size: 18px
+      line-height: 1.56
+      color: $black
+      display: block
+    p
+      padding-bottom: 25px
+    a.mail
+      padding: 25px 0
+  &__map
+    margin-top: 50px
+    position: relative
+    height: 535px
+    width: 100%
+    +r(767)
+      height: 350px
+      margin-top: 35px
+    p
+      font-size: 18px
+      display: block
+      text-align: center
+      width: 100%
+      color: $black
+      position: absolute
+      left: 0
+      top: 50px
+      +r(767)
+        top: auto
+        bottom: 35px
+        padding: 0 15px
